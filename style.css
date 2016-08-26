@@ -1,0 +1,77 @@
+body {
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 1.5em;  
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*---- Table Styles ----*/
+
+table, td, th {
+    border: 1px black solid;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+.table-header {
+    font-weight: bold;
+}
+
+/*---- Popup Styles ----*/
+
+#popup {
+    display: none;
+    background-color: white;
+    box-shadow: 10px 10px 5px gray;
+    border-radius: 5px;
+    border: 1px black solid;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.background-color {
+    background-color: gray;
+}
+
+#close {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0 0 0 10px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#namedetails {
+    width: 50%;
+}
+
+#total {
+    width: auto;
+    position: relative;
+    left: 80%;
+    border: none;
+}
+
+#total table, #total tr, #total td {
+    border: none;
+}
