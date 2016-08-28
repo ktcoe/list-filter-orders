@@ -13,19 +13,24 @@ h2 {
     font-weight: bold;
 }
 
+form {
+    padding: 20px 0;
+}
+
+.errorText {
+    color: red;
+}
+
 /*---- Table Styles ----*/
 
 table, td, th {
     border: 1px black solid;
+    text-align: center;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-}
-
-th {
-    text-align: left;
 }
 
 .table-header {
@@ -47,7 +52,7 @@ th {
 }
 
 .background-color {
-    background-color: gray;
+    background-color: #d3d3d3;
 }
 
 #close {

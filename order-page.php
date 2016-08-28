@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts.js"></script>
+<?php include('getorders.php'); ?>
 </head>
 
 <body>
@@ -12,11 +13,12 @@
 <div id="main">
 <h1>Orders</h1>
 
-<form action="" method="get">
-  Start Date <input type="date" name="start">
-  End Date <input type="date" name="end">
-  <input type="submit" value="Submit">
+<form>
+  Start Date <input type="date" id="start" name="start" value="dd/mm/yyyy">
+  End Date <input type="date" id="end" name="end" value="dd/mm/yyyy">
+  <input id="submit" type="submit" value="Submit">
 </form>
+<div id="errortext"></div>
 
 <table>
   <tr class="table-header">
@@ -25,12 +27,23 @@
     <th>Last Name</th>
     <th>Date</th>
   </tr>
-  <tr>
-    <td class="order-details"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+ 
+
+  <?php
+  foreach($orders as $order) {
+        //var_dump($order);
+        //die('dead');
+    ?>
+      <tr>
+        <td class="order-details"><?php echo $order['orderNumber']; ?></td>
+        <td><?php echo $order['customerFirstname']; ?></td>
+        <td><?php echo $order['customerLastname']; ?></td>
+        <td><?php echo $order['orderDate']; ?></td>
+      </tr>
+
+    <?php
+    }
+  ?>
 </table>
 
 </div><!-- End of main -->
@@ -42,11 +55,11 @@
 <table id="namedetails">
   <tr>
     <td class="table-header">First Name:</td>
-    <td></td>
+    <td>Test</td>
   </tr>
   <tr>
     <td class="table-header">Last Name:</td>
-    <td></td>
+    <td>Test</td>
   </tr>
 </table>
 
@@ -59,10 +72,10 @@
     <th>Total</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Test</td>
+    <td>Test</td>
+    <td>Test</td>
+    <td>Test</td>
   </tr>
 </table>
 
